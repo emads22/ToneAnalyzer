@@ -72,7 +72,7 @@ def render_home():
     st.markdown("""
         <p>
             <span style="display: inline; font-size: 3em; font-weight: bold;">ToneAnalyzer:&nbsp;&nbsp;</span>
-            <span style="display: inline; font-size: 2em; font-weight: normal;">Diary and eBook Sentiment Analysis</span>
+            <span style="display: inline; font-size: 2em; font-weight: bold;">Diary and eBook Sentiment Analysis</span>
         </p>
     """, unsafe_allow_html=True)
     st.write("Choose an analysis to perform using the sidebar.")
