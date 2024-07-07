@@ -1,5 +1,7 @@
 # ToneAnalyzer: Diary and eBook Sentiment Analysis
 
+![ToneAnalyzer_logo](./assets/images/ToneAnalyzer_logo.png)
+
 ## Overview
 ToneAnalyzer: Diary and eBook Sentiment Analysis is a Streamlit web application designed to analyze the emotional tone of diary entries and eBooks. It evaluates the positivity and negativity of each entry or eBook and visualizes the results over time.
 

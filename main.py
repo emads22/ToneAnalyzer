@@ -3,6 +3,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import streamlit as st
 import plotly.express as px
 import fitz  # PyMuPDF
+from constants import LOGO_FILE
 
 
 # Initialize SentimentIntensityAnalyzer
@@ -69,13 +70,7 @@ def analyze_pdf_text(text):
 
 
 def render_home():
-    st.markdown("""
-        <p>
-            <span style="display: inline; font-size: 3em; font-weight: bold;">ToneAnalyzer:&nbsp;&nbsp;</span>
-            <span style="display: inline; font-size: 2em; font-weight: bold;">Diary and eBook Sentiment Analysis</span>
-        </p>
-    """, unsafe_allow_html=True)
-    st.write("Choose an analysis to perform using the sidebar.")
+    st.subheader("Select an analysis from the sidebar to get started.")
 
 
 def render_diary_page():
@@ -144,6 +139,16 @@ def render_pdf_page():
 
 
 # Main application
+st.markdown("""
+        <p>
+            <span style="display: inline; font-size: 3em; font-weight: bold;">ToneAnalyzer:&nbsp;&nbsp;</span>
+            <span style="display: inline; font-size: 2em; font-weight: bold;">Diary and eBook Sentiment Analysis</span>
+        </p>
+    """, unsafe_allow_html=True)
+
+# Add logo image from a file
+st.image(str(LOGO_FILE), width=200)
+
 st.sidebar.title("Navigation")
 page = st.sidebar.radio(
     "Go to", ["Home", "Diary Tone Analysis", "PDF eBook Tone Analysis"])
